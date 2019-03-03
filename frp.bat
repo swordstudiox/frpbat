@@ -56,18 +56,19 @@ rem cscript -nologo -e:jscript "%~f0" "https://file.agint.me/frpbat/others/curl.
 
 
 rem curl -s http://www.lu8.win/downloads/frp/frp-version>frp-version.bat
-certutil.exe -urlcache -split -f https://github.com/swordstudiox/frpbat/releases/download/1.0/frpbat_version frpbat_version.bat
+certutil.exe -urlcache -split -f https://github.com/swordstudiox/frpbat/raw/master/frpbat_version frpbat_version.bat
 
 call frpbat_version.bat
 del frpbat_version.bat
-set client=20190302
+set client=20190301
 if %server% EQU %client% ( 
 rem del curl.exe 
 ) else ( 
 echo 最新版本：%server%
 echo 即将更新 
 rem curl -o %~nx0 -# http://www.lu8.win/downloads/frp/frp.bat 1>nul
-certutil.exe -urlcache -split -f %~nx0 https://github.com/swordstudiox/frpbat/raw/master/frp.bat 1>nul
+del frp.bat
+certutil.exe -urlcache -split -f https://github.com/swordstudiox/frpbat/raw/master/frp.bat
 rem curl -o %~nx0 -# https://file.agint.me/frpbat/frp.bat 1>nul
 echo 更新完成 
 %~nx0
