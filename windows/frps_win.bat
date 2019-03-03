@@ -320,7 +320,6 @@ goto moshi
 :start
 cd %~dp0
 if exist frps.exe goto run
-rem call :download "http://www.lu8.win/downloads/frp/windows/%version%/frps.exe" frps.exe
 call :download "https://github.com/swordstudiox/frpbat/raw/master/frp/windows/%version%/frps.exe" frps.exe
 goto start
 
