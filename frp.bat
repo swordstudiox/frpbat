@@ -60,7 +60,7 @@ certutil.exe -urlcache -split -f https://github.com/swordstudiox/frpbat/raw/mast
 
 call frpbat_version.bat
 del frpbat_version.bat
-set client=20190301
+set client=20190302
 if %server% EQU %client% ( 
 rem del curl.exe 
 ) else ( 
@@ -70,7 +70,6 @@ rem curl -o %~nx0 -# http://www.lu8.win/downloads/frp/frp.bat 1>nul
 certutil.exe -urlcache -split -f https://github.com/swordstudiox/frpbat/raw/master/frp.bat
 rem curl -o %~nx0 -# https://file.agint.me/frpbat/frp.bat 1>nul
 echo 更新完成 
-%~nx0
 call frp.bat
 )
 
