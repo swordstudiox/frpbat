@@ -67,7 +67,6 @@ rem del curl.exe
 echo 最新版本：%server%
 echo 即将更新 
 rem curl -o %~nx0 -# http://www.lu8.win/downloads/frp/frp.bat 1>nul
-del frp.bat
 certutil.exe -urlcache -split -f https://github.com/swordstudiox/frpbat/raw/master/frp.bat
 rem curl -o %~nx0 -# https://file.agint.me/frpbat/frp.bat 1>nul
 echo 更新完成 
