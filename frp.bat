@@ -52,19 +52,20 @@ cls
 
 cd %~dp0
 
-certutil.exe -urlcache -split -f https://github.com/swordstudiox/frpbat/raw/master/frpbat_version frpbat_version.bat
+REM certutil.exe -urlcache -split -f https://github.com/swordstudiox/frpbat/raw/master/frpbat_version frpbat_version.bat
 
-call frpbat_version.bat
-del frpbat_version.bat
-set client=20190302
-if %server% EQU %client% ( 
-) else ( 
-echo 最新版本：%server%
-echo 即将更新 
-certutil.exe -urlcache -split -f https://github.com/swordstudiox/frpbat/raw/master/frp.bat
+REM call frpbat_version.bat
+REM del frpbat_version.bat
+REM set client=20190302
+REM if %server% EQU %client% ( 
+REM rem 123
+REM ) else ( 
+REM echo 最新版本：%server%
+REM echo 即将更新 
+REM certutil.exe -urlcache -split -f https://github.com/swordstudiox/frpbat/raw/master/frp.bat
 
-echo 更新完成 
-)
+REM echo 更新完成 
+REM )
 
 goto moshi
 
